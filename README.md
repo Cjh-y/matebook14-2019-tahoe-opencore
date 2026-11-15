@@ -202,7 +202,8 @@ boot-args:
 │       ├── config.plist          ← 默认：输入 + Wi-Fi + 电池（装机验证过）
 │       ├── config-full.plist     ← 追加蓝牙 / 音频 / 休眠
 │       └── config-minimal.plist  ← 仅 5 个 kext，用于二分排查
-├── docs/PITFALLS.md
+├── docs/PITFALLS.md   踩坑全记录
+├── docs/FINALIZE.md   收尾：去掉 -v + 引导搬进内置硬盘
 ├── LICENSE
 └── README.md
 ```
@@ -225,6 +226,10 @@ boot-args:
 ### 2. 确认 `DisableIoMapper = true`
 
 如果你不是华为/Insyde 固件，这一项按 Dortania 指南取值即可；**MateBook 上必须是 `true`**。
+
+## 收尾（装完之后）
+
+见 [docs/FINALIZE.md](docs/FINALIZE.md)：去掉 `-v`（已改好，默认走 Apple logo）、把 EFI 搬进内置硬盘 ESP、用 BOOTICE / bcdedit 添加固件启动项。
 
 ## 已知问题 / 待办
 

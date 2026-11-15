@@ -208,8 +208,10 @@ Full write-up with real log excerpts: [docs/PITFALLS.md](docs/PITFALLS.md)
 │       ├── Resources/            Fonts only (Builtin picker needs no images)
 │       ├── config.plist          default: input + Wi-Fi + battery (used for the install)
 │       ├── config-full.plist     adds Bluetooth / audio / hibernation
-│       └── config-minimal.plist  5 kexts, for bisecting
-├── docs/PITFALLS.md
+│       ├── config-minimal.plist  5 kexts, for bisecting
+│       └── config-verbose.plist  troubleshooting: keeps -v
+├── docs/PITFALLS.md   full troubleshooting log
+├── docs/FINALIZE.md   remove -v + move EFI to the internal ESP
 ├── LICENSE
 └── README.md / README.en.md
 ```

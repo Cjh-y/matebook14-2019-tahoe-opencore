@@ -898,7 +898,7 @@
 				AAAAAAAAAAAAAAAAAAA=
 				</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 -wegnoegpu -igfxblr -igfxblt -igfxonln=1 revpatch=sbvmm -no_compat_check -btlfxallowanyaddr</string>
+				<string>keepsyms=1 -wegnoegpu -igfxblr -igfxblt -igfxonln=1 revpatch=sbvmm -no_compat_check</string>
 				<key>csr-active-config</key>
 				<data>
 				AwgAAA==
