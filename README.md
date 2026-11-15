@@ -1,5 +1,7 @@
 # Huawei MateBook 14 (2019) — macOS Tahoe 26 黑苹果 EFI
 
+[简体中文](README.md) | [English](README.en.md)
+
 [![macOS](https://img.shields.io/badge/macOS-26.7.3-black?logo=apple)](https://www.apple.com/macos/)
 [![OpenCore](https://img.shields.io/badge/OpenCore-1.0.9-blue)](https://github.com/acidanthera/OpenCorePkg)
 [![Status](https://img.shields.io/badge/status-working-brightgreen)]()
