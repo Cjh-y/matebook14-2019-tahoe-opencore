@@ -39,7 +39,7 @@
 | 键盘 / 触控板 | ✅ | `VoodooPS2` + `VoodooI2C` |
 | 电池百分比 | ✅ | `SMCBatteryManager` |
 | 睡眠 / 唤醒 | ⏳ | 未长时间验证 |
-| 音频 ALC256 | ⏳ | `AppleALC` 已载入，layout 76，未系统验证 |
+| 音频 ALC256 | ⏳ | `AppleALC 1.9.9` + `SimpleHDA`，layout 76，见 [docs/AUDIO-FIX.md](docs/AUDIO-FIX.md) |
 | HDMI 输出 | ⏳ | `framebuffer-con1/con2` 已按 14.5 时期可用配置写入 |
 | 读卡器 / 指纹 | ❌ | 无解 |
 | MX250 | ❌ | 无解（已被 SSDT 关闭，省电） |
@@ -204,6 +204,7 @@ boot-args:
 │       └── config-minimal.plist  ← 仅 5 个 kext，用于二分排查
 ├── docs/PITFALLS.md   踩坑全记录
 ├── docs/FINALIZE.md   收尾：去掉 -v + 引导搬进内置硬盘
+├── docs/AUDIO-FIX.md  声卡：AppleALC + SimpleHDA + layout-id 排查
 ├── LICENSE
 └── README.md
 ```
@@ -233,7 +234,7 @@ boot-args:
 
 ## 已知问题 / 待办
 
-- [ ] 音频（ALC256 / layout 76）未系统验证
+- [ ] 音频（ALC256 / layout 76）：已补 AppleALC + SimpleHDA，待验证
 - [ ] 睡眠唤醒、合盖休眠未长期验证
 - [ ] HDMI 外接未验证
 - [ ] CPU 电源管理未做 `SSDT-PLUG`（当前靠默认，未测功耗温度）

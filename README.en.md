@@ -39,7 +39,7 @@ OpenCore configuration and a complete troubleshooting log for running **macOS Ta
 | Keyboard / touchpad | ✅ | `VoodooPS2` + `VoodooI2C` |
 | Battery percentage | ✅ | `SMCBatteryManager` |
 | Sleep / wake | ⏳ | not soak-tested |
-| Audio (ALC256) | ⏳ | `AppleALC` loaded, layout 76, not verified |
+| Audio (ALC256) | ⏳ | `AppleALC 1.9.9` + `SimpleHDA`, layout 76 — see [docs/AUDIO-FIX.md](docs/AUDIO-FIX.md) |
 | HDMI output | ⏳ | connector patches carried over from the working 14.5 setup |
 | SD reader / fingerprint | ❌ | unsupported |
 | MX250 | ❌ | unsupported (disabled by SSDT to save power) |
@@ -212,6 +212,7 @@ Full write-up with real log excerpts: [docs/PITFALLS.md](docs/PITFALLS.md)
 │       └── config-verbose.plist  troubleshooting: keeps -v
 ├── docs/PITFALLS.md   full troubleshooting log
 ├── docs/FINALIZE.md   remove -v + move EFI to the internal ESP
+├── docs/AUDIO-FIX.md  audio: AppleALC + SimpleHDA + layout-id troubleshooting
 ├── LICENSE
 └── README.md / README.en.md
 ```
@@ -234,7 +235,7 @@ Follow Dortania's guide for your own firmware. **On this MateBook it must be `tr
 
 ## Open items
 
-- [ ] Audio (ALC256 / layout 76) not verified
+- [ ] Audio (ALC256 / layout 76): AppleALC + SimpleHDA added, pending verification
 - [ ] Sleep, wake, lid-close not soak-tested
 - [ ] HDMI output not verified
 - [ ] No `SSDT-PLUG` — CPU power management left at defaults
